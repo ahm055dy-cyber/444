@@ -1,0 +1,15 @@
+{
+  "name": "سَلى SALA Marketplace",
+  "short_name": "سَلى",
+  "description": "سوق إلكتروني لاكتشاف المنتجات والمتاجر",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#1266e8",
+  "icons": [
+    {"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
