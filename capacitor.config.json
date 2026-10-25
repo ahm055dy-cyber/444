@@ -1,0 +1,8 @@
+{
+  "appId": "com.sala.marketplace",
+  "appName": "SALA - سَلى",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  }
+}

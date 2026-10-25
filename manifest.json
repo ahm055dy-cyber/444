@@ -1,0 +1,13 @@
+{
+  "name": "سَلى SALA",
+  "short_name": "سَلى",
+  "description": "سوق سَلى الإلكتروني",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#1769e8",
+  "icons": [{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
