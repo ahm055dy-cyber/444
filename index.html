@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1266e8">
+  <meta name="description" content="سَلى SALA — سوق إلكتروني يجمع المتاجر والمنتجات في مكان واحد.">
+  <title>سَلى | SALA</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="splash" id="splash">
+    <div class="splash-mark">S</div><div class="splash-name">سَلى <span>SALA</span></div>
+    <p>كل ما تبحث عنه، في مكان واحد</p><div class="loader"><i></i></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="سلى الرئيسية"><span class="brand-mark">S</span><span><b>سَلى</b><small>SALA MARKETPLACE</small></span></a>
+    <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث عن منتج أو متجر..." autocomplete="off"><button id="clearSearch" aria-label="مسح البحث">×</button></label>
+    <div class="top-actions">
+      <button class="icon-btn" id="openFavorites" aria-label="المفضلة">♡<i id="favCount">0</i></button>
+      <button class="icon-btn" id="openCart" aria-label="السلة">🛍<i id="cartCount">0</i></button>
+      <button class="profile-btn" id="openAccount">حسابي</button>
+    </div>
+  </header>
+
+  <nav class="category-nav" id="categoryNav" aria-label="الأقسام">
+    <button class="nav-chip active" data-category="الكل">الرئيسية</button>
+    <button class="nav-chip" data-category="الملابس">الملابس</button>
+    <button class="nav-chip" data-category="الأحذية">الأحذية</button>
+    <button class="nav-chip" data-category="الحقائب">الحقائب</button>
+    <button class="nav-chip" data-category="الإلكترونيات">الإلكترونيات</button>
+    <button class="nav-chip" data-category="الجمال">الجمال والعناية</button>
+    <button class="nav-chip" data-category="المنزل">المنزل</button>
+    <button class="nav-chip" data-category="الإكسسوارات">الإكسسوارات</button>
+  </nav>
+
+  <main class="page">
+    <section class="hero" id="hero">
+      <div class="hero-copy"><span class="eyebrow">اكتشف مجموعتك المفضلة</span><h1>أسلوبك، اختياراتك،<br><em>عالمك في سَلى.</em></h1><p>تسوّق من تشكيلات متنوعة واكتشف متاجر ومنتجات جديدة كل يوم.</p><button class="primary-btn" id="shopNow">ابدأ التسوق <span>←</span></button><div class="hero-dots"><b></b><i></i><i></i></div></div>
+      <div class="hero-art"><div class="hero-circle"></div><div class="hero-card card-a"><span>اختيارات اليوم</span><b>ستايل جديد ✦</b><small>اكتشف أحدث المنتجات</small></div><div class="hero-card card-b"><span>عروض مميزة</span><b>تسوّق بذكاء</b><small>منتجات تناسب ذوقك</small></div><div class="hero-bag">S</div></div>
+    </section>
+
+    <section class="benefits">
+      <div><span>✦</span><p><b>متاجر متنوعة</b><small>كل اختياراتك في مكان واحد</small></p></div>
+      <div><span>↗</span><p><b>اكتشف الجديد</b><small>تشكيلات تتجدد باستمرار</small></p></div>
+      <div><span>♡</span><p><b>قائمة مفضلة</b><small>احتفظ بما أعجبك</small></p></div>
+      <div><span>✓</span><p><b>تجربة سهلة</b><small>تسوّق بخطوات واضحة</small></p></div>
+    </section>
+
+    <section class="section" id="categoriesSection"><div class="section-heading"><div><span class="eyebrow">تسوّق حسب رغبتك</span><h2>الأقسام الرئيسية</h2></div><button class="text-btn" id="allCategories">عرض المنتجات ←</button></div><div class="category-grid" id="categoryGrid"></div></section>
+
+    <section class="promo-strip"><div><span>مختارة لك من سَلى</span><h2>تفاصيل صغيرة تصنع فرقًا كبيرًا</h2><p>تصفّح التشكيلات وابحث عن الشيء الذي يشبهك.</p></div><div class="promo-symbol">S<span>✦</span></div></section>
+
+    <section class="section" id="productsSection"><div class="section-heading"><div><span class="eyebrow">اختيارات سَلى</span><h2 id="productsTitle">منتجات قد تعجبك</h2></div><div class="sort-wrap"><label for="sortSelect">ترتيب حسب</label><select id="sortSelect"><option value="featured">المقترحة</option><option value="newest">الأحدث</option><option value="priceAsc">السعر: الأقل أولًا</option><option value="priceDesc">السعر: الأعلى أولًا</option><option value="rating">الأعلى تقييمًا</option></select></div></div><div class="filter-row"><button class="filter-chip active" data-filter="all">الكل</button><button class="filter-chip" data-filter="available">المتوفر فقط</button><button class="filter-chip" data-filter="sale">عروض</button></div><div class="product-grid" id="productGrid"></div><div class="empty-state hidden" id="emptyState"><span>⌕</span><h3>لم نعثر على منتجات</h3><p>جرّب البحث بكلمات مختلفة أو اختر قسمًا آخر.</p><button class="primary-btn" id="resetFilters">عرض كل المنتجات</button></div></section>
+
+    <section class="seller-banner"><div class="seller-icon">＋</div><div><span class="eyebrow">هل لديك منتجات مميزة؟</span><h2>افتح متجرك على سَلى</h2><p>قدّم طلب الانضمام كبائع، وبعد مراجعة الإدارة يمكنك البدء بإدارة منتجاتك.</p></div><button class="primary-btn" id="becomeSeller">انضم كبائع <span>←</span></button></section>
+    <section class="newsletter"><div><h2>خلك قريب من جديد سَلى</h2><p>اكتب بريدك لاستلام أخبار المنتجات والعروض.</p></div><form id="newsletterForm"><input type="email" placeholder="بريدك الإلكتروني" required><button class="primary-btn">اشتراك</button></form></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">S</span><span><b>سَلى</b><small>SALA MARKETPLACE</small></span></a><p>وجهتك لاكتشاف المنتجات والمتاجر.</p><div>© <span id="year"></span> SALA. جميع الحقوق محفوظة.</div></footer>
+
+  <nav class="mobile-nav">
+    <button class="mobile-tab active" data-target="top"><span>⌂</span>الرئيسية</button>
+    <button class="mobile-tab" id="mobileSearch"><span>⌕</span>بحث</button>
+    <button class="mobile-tab" id="mobileFavorites"><span>♡</span>المفضلة</button>
+    <button class="mobile-tab" id="mobileCart"><span>🛍</span>السلة</button>
+    <button class="mobile-tab" id="mobileAccount"><span>♙</span>حسابي</button>
+  </nav>
+
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="side-panel" id="sidePanel" aria-label="لوحة جانبية"><div class="panel-head"><h2 id="panelTitle">سلة التسوق</h2><button id="closePanel" class="close-btn">×</button></div><div id="panelBody"></div></aside>
+
+  <dialog class="modal" id="productModal"><button class="modal-close" data-close="productModal">×</button><div id="productModalBody"></div></dialog>
+  <dialog class="modal form-modal" id="accountModal"><button class="modal-close" data-close="accountModal">×</button><div id="accountContent"></div></dialog>
+  <dialog class="modal form-modal" id="sellerModal"><button class="modal-close" data-close="sellerModal">×</button><div id="sellerContent"></div></dialog>
+  <dialog class="modal form-modal" id="checkoutModal"><button class="modal-close" data-close="checkoutModal">×</button><div id="checkoutContent"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
